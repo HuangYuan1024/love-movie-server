@@ -1,13 +1,11 @@
 package com.huangyuan.lovecommon;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Test;
 
-@SpringBootTest
-class LoveCommonApplicationTests {
+public class LoveCommonApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
