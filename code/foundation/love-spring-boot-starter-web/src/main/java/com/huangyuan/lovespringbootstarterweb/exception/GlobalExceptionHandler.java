@@ -1,5 +1,6 @@
 package com.huangyuan.lovespringbootstarterweb.exception;
 
+import com.huangyuan.lovecommon.exception.BizException;
 import com.huangyuan.lovecommon.result.R;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;

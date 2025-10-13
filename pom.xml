@@ -153,20 +153,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Spring Boot 打包 -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <!-- 代码质量 -->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
@@ -196,18 +182,35 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <!-- 不要写 executions，只提供版本和配置 -->
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <!-- 5. 聚合模块 -->
     <modules>
+      <!-- 基础模块 -->
       <module>code/foundation/love-common</module>
       <module>code/foundation/love-spring-boot-starter-web</module>
+
+      <!-- 用户服务模块 -->
       <module>code/business/user-service/user-application</module>
       <module>code/business/user-service/user-domain</module>
       <module>code/business/user-service/user-infrastructure</module>
       <module>code/business/user-service/user-interface</module>
       <module>code/business/user-service/user-boot</module>
+
+      <!-- 平台服务模块 -->
       <module>code/platform/gateway-service</module>
     </modules>
+
 
 </project>

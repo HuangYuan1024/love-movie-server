@@ -1,6 +1,14 @@
-package com.huangyuan.lovespringbootstarterweb.exception;
+package com.huangyuan.lovecommon.exception;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import java.io.Serial;
+
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class BizException extends RuntimeException {
+    @Serial
     private static final long serialVersionUID = 1L;
     private String code;
 
@@ -27,14 +35,6 @@ public class BizException extends RuntimeException {
 
     public BizException(String code, String message, Throwable cause) {
         super(message, cause);
-        this.code = code;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
         this.code = code;
     }
 }
