@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.huangyuan.userboot", "com.huangyuan.userinterface", "com.huangyuan.lovespringbootstarterweb"})
+@ComponentScan(basePackages = {"com.huangyuan.userboot", "com.huangyuan.userinterface", "com.huangyuan.lovespringbootstarterweb", "com.huangyuan.lovespringbootstartermybatis"})
 public class UserBootApplication {
 
     public static void main(String[] args) {

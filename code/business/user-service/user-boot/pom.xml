@@ -37,6 +37,12 @@
 
         <dependency>
             <groupId>com.huangyuan</groupId>
+            <artifactId>love-spring-boot-starter-mybatis</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.huangyuan</groupId>
             <artifactId>user-interface</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -199,6 +199,7 @@
         <!-- 基础模块 -->
         <module>code/foundation/love-common</module>
         <module>code/foundation/love-spring-boot-starter-web</module>
+        <module>code/foundation/love-spring-boot-starter-security</module>
 
         <!-- 用户服务模块 -->
         <module>code/business/user-service/user-application</module>
@@ -213,6 +214,27 @@
         <module>code/business/movie-service/movie-infrastructure</module>
         <module>code/business/movie-service/movie-interface</module>
         <module>code/business/movie-service/movie-boot</module>
+
+        <!-- 订单服务模块 -->
+        <module>code/business/order-service/order-application</module>
+        <module>code/business/order-service/order-domain</module>
+        <module>code/business/order-service/order-infrastructure</module>
+        <module>code/business/order-service/order-interface</module>
+        <module>code/business/order-service/order-boot</module>
+
+        <!-- 促销服务模块 -->
+        <module>code/business/promotion-service/promotion-application</module>
+        <module>code/business/promotion-service/promotion-domain</module>
+        <module>code/business/promotion-service/promotion-infrastructure</module>
+        <module>code/business/promotion-service/promotion-interface</module>
+        <module>code/business/promotion-service/promotion-boot</module>
+
+        <!-- 查询服务模块 -->
+        <module>code/business/search-service/search-application</module>
+        <module>code/business/search-service/search-domain</module>
+        <module>code/business/search-service/search-infrastructure</module>
+        <module>code/business/search-service/search-interface</module>
+        <module>code/business/search-service/search-boot</module>
 
         <!-- 平台服务模块 -->
         <module>code/platform/gateway-service</module>
