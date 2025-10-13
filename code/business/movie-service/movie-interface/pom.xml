@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../../../../pom.xml</relativePath>
     </parent>
-    <artifactId>user-interface</artifactId>
-    <name>user-interface</name>
-    <description>user-interface</description>
+    <artifactId>movie-interface</artifactId>
+    <name>movie-interface</name>
+    <description>movie-interface</description>
     <properties>
         <java.version>19</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,7 +21,7 @@
 
         <dependency>
             <groupId>com.huangyuan</groupId>
-            <artifactId>user-infrastructure</artifactId>
+            <artifactId>movie-infrastructure</artifactId>
             <version>${project.version}</version>
         </dependency>
 

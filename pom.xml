@@ -176,7 +176,6 @@
                 </dependencies>
                 <configuration>
                     <configLocation>${maven.multiModuleProjectDirectory}/style/checkstyle/love_checkstyle.xml</configLocation>
-                    <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
                 </configuration>
@@ -197,20 +196,26 @@
 
     <!-- 5. 聚合模块 -->
     <modules>
-      <!-- 基础模块 -->
-      <module>code/foundation/love-common</module>
-      <module>code/foundation/love-spring-boot-starter-web</module>
+        <!-- 基础模块 -->
+        <module>code/foundation/love-common</module>
+        <module>code/foundation/love-spring-boot-starter-web</module>
 
-      <!-- 用户服务模块 -->
-      <module>code/business/user-service/user-application</module>
-      <module>code/business/user-service/user-domain</module>
-      <module>code/business/user-service/user-infrastructure</module>
-      <module>code/business/user-service/user-interface</module>
-      <module>code/business/user-service/user-boot</module>
+        <!-- 用户服务模块 -->
+        <module>code/business/user-service/user-application</module>
+        <module>code/business/user-service/user-domain</module>
+        <module>code/business/user-service/user-infrastructure</module>
+        <module>code/business/user-service/user-interface</module>
+        <module>code/business/user-service/user-boot</module>
 
-      <!-- 平台服务模块 -->
-      <module>code/platform/gateway-service</module>
+        <!-- 影片服务模块 -->
+        <module>code/business/movie-service/movie-application</module>
+        <module>code/business/movie-service/movie-domain</module>
+        <module>code/business/movie-service/movie-infrastructure</module>
+        <module>code/business/movie-service/movie-interface</module>
+        <module>code/business/movie-service/movie-boot</module>
+
+        <!-- 平台服务模块 -->
+        <module>code/platform/gateway-service</module>
     </modules>
-
 
 </project>

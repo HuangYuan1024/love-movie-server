@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../../../../pom.xml</relativePath>
     </parent>
-    <artifactId>user-interface</artifactId>
-    <name>user-interface</name>
-    <description>user-interface</description>
+    <artifactId>movie-domain</artifactId>
+    <name>movie-domain</name>
+    <description>movie-domain</description>
     <properties>
         <java.version>19</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,22 +20,15 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.huangyuan</groupId>
-            <artifactId>user-infrastructure</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -55,6 +48,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

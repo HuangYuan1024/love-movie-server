@@ -1,11 +1,11 @@
 package com.huangyuan.userinterface;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class UserInterfaceApplicationTests {
+public class UserInterfaceApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
