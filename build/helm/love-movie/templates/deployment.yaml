@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+spec:
+  # 设置部署的副本数量，从Helm values中获取配置
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    # 定义选择器标签，用于匹配具有app: user-service标签的Pod
+    matchLabels: { app: user-service }
+  template:
+    metadata:
+      # 为Pod模板设置标签，标识这是user-service应用
+      labels: { app: user-service }
+    spec:
+      containers:
+        # 定义容器配置
+        - name: user-service
+          # 设置容器镜像，从values中的repository和tag字段构建完整镜像地址
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            # 暴露容器端口8080
+            - containerPort: 8080
+          env:
+            # 设置Spring Boot激活的配置文件环境变量
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.spring.profiles.active | quote }}
+          resources:
+            # 配置容器资源限制和请求，将values中的resources对象转换为YAML格式并缩进
+            {{- toYaml .Values.resources | nindent 12 }}
+          livenessProbe:
+            # 配置存活探针，检测容器是否正常运行，将values中的livenessProbe对象转换为YAML格式并缩进
+            {{- toYaml .Values.livenessProbe | nindent 12 }}
+          readinessProbe:
+            # 配置就绪探针，检测容器是否准备好接收流量，将values中的readinessProbe对象转换为YAML格式并缩进
+            {{- toYaml .Values.readinessProbe | nindent 12 }}
+
