@@ -1,0 +1,19 @@
+# higress-values.yaml
+global:
+  local: false  # 设置为false，不使用hostPort
+  enableHostPort: false
+
+gateway:
+  hostPort:
+    enabled: false  # 明确禁用 hostPort
+  service:
+    type: NodePort
+    ports:
+      - name: http
+        port: 80        # Service 端口保持 80（集群内部访问）
+        targetPort: 80  # 容器端口保持 80
+        nodePort: 30080 # 节点访问端口
+      - name: https
+        port: 443       # Service 端口保持 443
+        targetPort: 443 # 容器端口保持 443  
+        nodePort: 30443 # 节点访问端口

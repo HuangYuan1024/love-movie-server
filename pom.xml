@@ -200,6 +200,10 @@
         <module>code/foundation/love-common</module>
         <module>code/foundation/love-spring-boot-starter-web</module>
         <module>code/foundation/love-spring-boot-starter-security</module>
+        <module>code/foundation/love-spring-boot-starter-mybatis</module>
+        <module>code/foundation/love-spring-boot-starter-lock</module>
+        <module>code/foundation/love-spring-boot-starter-idempotent</module>
+        <module>code/foundation/love-sdk-openfeign</module>
 
         <!-- 用户服务模块 -->
         <module>code/business/user-service/user-application</module>

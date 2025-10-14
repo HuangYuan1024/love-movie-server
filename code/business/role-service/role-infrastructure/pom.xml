@@ -6,11 +6,11 @@
         <groupId>com.huangyuan</groupId>
         <artifactId>love-movie-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../../pom.xml</relativePath>
+        <relativePath>../../../../pom.xml</relativePath>
     </parent>
-    <artifactId>love-spring-boot-starter-web</artifactId>
-    <name>love-spring-boot-starter-web</name>
-    <description>love-spring-boot-starter-web</description>
+    <artifactId>role-infrastructure</artifactId>
+    <name>role-infrastructure</name>
+    <description>role-infrastructure</description>
     <properties>
         <java.version>19</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,26 +30,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.huangyuan</groupId>
-            <artifactId>love-common</artifactId>
+            <artifactId>role-domain</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate.validator</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>8.0.1.Final</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -75,23 +58,6 @@
                     <target>19</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-                <configuration>
-                    <mainClass>com.huangyuan.lovespringbootstarterweb.LoveSpringBootStarterWebApplication</mainClass>
-                    <skip>true</skip>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>repackage</id>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

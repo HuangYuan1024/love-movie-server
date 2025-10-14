@@ -1,0 +1,16 @@
+# 仅追加：让业务容器感知 Nacos
+env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: k8s
+  - name: NACOS_SERVER_ADDR
+    value: nacos.default.svc.cluster.local:8848
+  - name: NACOS_NAMESPACE
+    value: public
+  - name: NACOS_GROUP
+    value: DEFAULT_GROUP
+  - name: NACOS_AUTH_TOKEN
+    value: "VGhpc0lzQVNlY3JldEtleUZvck5hY29zMTIzNDU2Nzg5MDEyMw=="
+  - name: NACOS_AUTH_ENABLE
+    value: "true"
+  - name: NACOS_CONFIG_MIGRATE_NAMESPACE_SKIP
+    value: "true"

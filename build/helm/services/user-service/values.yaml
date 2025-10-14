@@ -1,0 +1,22 @@
+# build/helm/service/values.yaml
+# 定义用户服务的镜像配置
+# repository: 指定Docker镜像仓库地址，用于拉取用户服务镜像
+# tag: 指定镜像标签，默认使用0.1.0标签
+image:
+  repository: love-movie/user-service
+  tag: "0.1.0"
+  pullPolicy: Never  # 添加这一行
+
+# 定义用户服务的网络服务配置
+# port: 指定服务暴露的端口号，容器将监听8080端口
+service:
+  port: "8080"
+
+spring:
+  profiles:
+    active: local
+
+resources: {}
+livenessProbe: {}
+readinessProbe: {}
+replicaCount: 1

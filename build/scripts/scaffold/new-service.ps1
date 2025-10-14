@@ -5,6 +5,10 @@
 #                命令格式:     .\new-service.ps1 <service_name>
 # 示例用法(生成一个user服务):    .\new-service.ps1 user
 
+# 注意事项：
+# 1. 在运行脚本之前，请先启用系统长路径支持（具体操作可百度或询问AI）
+# 2. 请使用PowerShell 7 或更高版本运行此脚本！
+
 param(
     # 只允许输入一个「单词」
     [Parameter(Mandatory = $true)]

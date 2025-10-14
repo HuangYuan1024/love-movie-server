@@ -1,0 +1,22 @@
+# love-movie-server/code/business/user-service/src/test/resources/application.yml
+
+spring:
+  application:
+    name: love-user-service
+
+  cloud:
+    nacos:
+      server-addr: host.docker.internal:8848
+      discovery:
+        namespace: higress-system
+      config:
+        file-extension: yaml
+        namespace: higress-system
+  config:
+    import: optional:nacos:${spring.application.name}
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/love_movie?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,38 @@
+# Kubernetes Service资源配置文件
+# 用于定义user-service服务的网络访问策略和服务发现机制
+#
+# 功能说明:
+# - 创建一个名为user-service的ClusterIP类型服务
+# - 暴露8080端口供集群内部访问
+# - 启用Prometheus监控指标抓取
+# - 通过标签选择器关联后端Pod实例
+#
+# 标签策略:
+# - app: user-service  应用标识标签
+# - tier: backend      层级标识标签
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  labels:
+    app: user-service
+    tier: backend
+  annotations:
+    prometheus.io/scrape: "true"
+spec:
+  # 服务选择器，用于匹配后端Pod实例
+  # 会选择所有包含app: user-service标签的Pod
+  selector:
+    app: user-service
+  # 服务类型设置为ClusterIP
+  # 仅在集群内部可访问，不对外暴露
+  type: ClusterIP
+  # 端口配置列表
+  # 定义服务监听端口和转发到Pod的端口
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http-user-service
+
