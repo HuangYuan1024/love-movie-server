@@ -1,0 +1,12 @@
+# 定义用户服务的镜像配置
+# repository: 指定Docker镜像仓库地址，用于拉取用户服务镜像
+# tag: 指定镜像标签，默认使用latest标签
+image:
+  repository: love-movie/user-service
+  tag: "{{ .Values.image.tag | default \"latest\" }}"
+
+# 定义用户服务的网络服务配置
+# port: 指定服务暴露的端口号，容器将监听8080端口
+service:
+  port: "8080"
+

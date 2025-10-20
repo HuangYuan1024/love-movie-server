@@ -1,0 +1,32 @@
+# Love-Movie平台Helm Chart配置文件
+# 定义了应用程序的基本信息、版本要求和维护者信息
+#
+# 参数说明:
+#   apiVersion: Helm Chart API版本，v2表示使用Helm 3
+#   name: Chart名称，用于标识该应用程序包
+#   description: 应用程序描述信息
+#   type: Chart类型，application表示这是一个应用型Chart
+#   version: Chart版本号，遵循语义化版本规范
+#   appVersion: 应用程序版本号
+#   keywords: 关键词列表，用于Chart搜索和分类
+#   home: 项目主页URL
+#   maintainers: 维护者信息列表
+#     - name: 维护者名称
+#     - email: 维护者联系邮箱
+#   kubeVersion: Kubernetes版本要求，指定支持的最低Kubernetes版本
+
+apiVersion: v2
+name: love-movie
+description: Love-Movie Platform
+type: application
+version: 0.1.0
+appVersion: 0.1.0
+keywords:
+  - movie
+  - platform
+  - entertainment
+home: https://example.com/love-movie
+maintainers:
+  - name: Love-Movie Team
+    email: team@example.com
+kubeVersion: ">=1.19.0-0"
