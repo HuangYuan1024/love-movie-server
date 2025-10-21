@@ -6,7 +6,7 @@
         <groupId>com.huangyuan</groupId>
         <artifactId>love-movie-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../../../../../pom.xml</relativePath>
+        <relativePath>../../../../pom.xml</relativePath>
     </parent>
     <artifactId>role-domain</artifactId>
     <name>role-domain</name>
